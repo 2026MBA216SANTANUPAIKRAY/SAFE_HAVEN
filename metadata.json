@@ -1,0 +1,6 @@
+{
+  "name": "SafeHaven Institutional Companion",
+  "description": "Authoritative residential safety, DPDP 2023 sovereign data moat, zero-optical mmWave family care, and voice-masked doorstep security companion.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
