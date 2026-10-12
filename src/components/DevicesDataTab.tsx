@@ -501,7 +501,7 @@ export const DevicesDataTab: React.FC<DevicesDataTabProps> = ({
         </div>
 
         {/* DPDP Statutory Consumer Rights Overrides & Analytics Actions */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
           <button
             type="button"
             onClick={() => {
@@ -517,7 +517,7 @@ export const DevicesDataTab: React.FC<DevicesDataTabProps> = ({
                 );
               }
             }}
-            className="flex items-center justify-center gap-2 h-11 px-3 bg-[#3E8F5D] hover:bg-[#34784e] text-white rounded-lg transition-all active:scale-[0.98] font-sans font-semibold text-[13px] shadow-sm cursor-pointer"
+            className="flex items-center justify-center gap-1.5 h-11 px-2.5 bg-[#3E8F5D] hover:bg-[#34784e] text-white rounded-lg transition-all active:scale-[0.98] font-sans font-semibold text-[12px] shadow-sm cursor-pointer"
           >
             <span
               className="material-symbols-outlined text-[18px]"
@@ -525,23 +525,39 @@ export const DevicesDataTab: React.FC<DevicesDataTabProps> = ({
             >
               monitoring
             </span>
-            <span>Global View (24h)</span>
+            <span>Global View</span>
           </button>
+          <a
+            href="/SafeHaven_Apartment402_Offline.html"
+            download="SafeHaven_Apartment402_Offline.html"
+            onClick={() => {
+              if (onShowToast) {
+                onShowToast(
+                  'Downloading standalone offline HTML app. Double-click to run locally!',
+                  'download_done'
+                );
+              }
+            }}
+            className="flex items-center justify-center gap-1.5 h-11 px-2.5 bg-[#060810] hover:bg-[#202026] text-white rounded-lg transition-all active:scale-[0.98] font-sans font-semibold text-[12px] shadow-sm cursor-pointer"
+          >
+            <span className="material-symbols-outlined text-[18px]">html</span>
+            <span>Offline .HTML</span>
+          </a>
           <button
             type="button"
             onClick={handleExportLogs}
             disabled={isExporting}
-            className="flex items-center justify-center gap-2 h-11 px-3 bg-[#f1ede5] hover:bg-[#ece8e0] text-[#060810] rounded-lg transition-all active:scale-[0.98] font-sans font-semibold text-[13px] border border-[#e6e2da]"
+            className="flex items-center justify-center gap-1.5 h-11 px-2.5 bg-[#f1ede5] hover:bg-[#ece8e0] text-[#060810] rounded-lg transition-all active:scale-[0.98] font-sans font-semibold text-[12px] border border-[#e6e2da]"
           >
             <span className="material-symbols-outlined text-[18px]">
               {isExporting ? 'sync' : 'download_for_offline'}
             </span>
-            <span>{isExporting ? 'Exporting...' : 'Export My Logs'}</span>
+            <span>{isExporting ? 'Exporting...' : 'Export Logs'}</span>
           </button>
           <button
             type="button"
             onClick={() => setShowShredModal(true)}
-            className="flex items-center justify-center gap-2 h-11 px-3 bg-[#ffdada] hover:bg-[#ffb3b4] text-[#920024] rounded-lg transition-all active:scale-[0.98] font-sans font-semibold text-[13px]"
+            className="flex items-center justify-center gap-1.5 h-11 px-2.5 bg-[#ffdada] hover:bg-[#ffb3b4] text-[#920024] rounded-lg transition-all active:scale-[0.98] font-sans font-semibold text-[12px]"
           >
             <span className="material-symbols-outlined text-[18px]">delete_forever</span>
             <span>Right to Erasure</span>

@@ -13,6 +13,7 @@ import { ActiveCallModal } from './components/ActiveCallModal';
 import { CriticalFallModal } from './components/CriticalFallModal';
 import { IncidentDetailModal } from './components/IncidentDetailModal';
 import { saveLocalIncident } from './utils/indexedDB';
+import { HARDWARE_NODES } from './data/mockData';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('doorstep');
@@ -124,6 +125,7 @@ export default function App() {
       {/* Institutional Top Application Bar */}
       <Header
         activeTab={activeTab}
+        onNavigateTab={setActiveTab}
         isLocalOnlyMode={isLocalOnlyMode}
         onTriggerIncomingCall={handleTriggerIncomingCall}
         onTriggerFallAlert={handleTriggerFallAlert}
@@ -131,6 +133,7 @@ export default function App() {
         onViewIncidentDetail={handleViewIncidentDetail}
         onOpenInHomeCctv={handleOpenInHomeCctv}
         onShowToast={showToast}
+        nodes={HARDWARE_NODES}
       />
 
       {/* Main Viewport Container */}
